@@ -1,72 +1,64 @@
 //Задание 1
-let one = 'true'
-let two = false
-let three = 17
-let four = undefined
-let five = null
-console.log(typeof one, typeof two, typeof three, typeof four, typeof five)
+function getSum() {
+    let num = Number(prompt('Введите число'));
+    let sum =0
+    for (let i = 0; i <= num; i++) {
+        sum += i;
+    }
+    return sum
+}
+console.log(getSum());
 
 //Задание 2
-let height = 15
-let width = 20
-    if (width > height) {
-        console.log(width)
-    }
+function credit(sumCredit){
+    let percent = 0.17
+    let years = 5
+    let total = sumCredit * (1 + percent * years)
+    return pay = total - sumCredit
+}
+console.log(credit(100));
 
 //Задание 3
-for (let i = 1; i <=20;i++) {
-    if (i%3 == 0)
-    console.log(i)
+function trimString(word, from, to) {
+    word = prompt('Введите слово');
+    from = prompt('Введите значение ОТ:');
+    to = prompt('Введите значение ПО:');
+    let result = word.slice(from, to);
+    return result;
 }
+console.log(trimString());
 
 //Задание 4
-let key = true
-let documents = true
-let pen = true
-let apple = false
-let orange = true
-let shouldGoToWork = orange || apple && key && documents && pen;
-console.log(shouldGoToWork)
+let num = Number(prompt('Введите число для вычисления суммы'));
+function getSumNumbers(number) {
+    let str = number.toString();
+    let sum = 0
+    for (let i = 0; i < str.length; i++) {
+        sum += Number(str[i]);
+    }
+    return sum
+}
+console.log(getSumNumbers(num));
 
 //Задание 5
-let a = prompt('Введите ваше число')
-    if (a%3 === 0 && a%5 === 0){
-    console.log('FizBuz')
+function getSum2(a, b) {
+    sum = 0;
+    for (let i = a; i < b; i++) {
+        sum += i;
+    }
+    return sum;
 }
-    else if (a%5 == 0){
-        console.log('Fiz')
-}
-    else if (a%3 == 0){
-    console.log('Buz')
-}
+console.log(getSum2(-1,2));
 
 //Задание 6
-let b = prompt('Введите ваш возраст')
-    if (b>=16 && b<=18){
-    console.log('Можешь выкурить сигаретку , только маме не говори')
-}
-    else if (b >=18 ){
-        console.log('Попей пивка')
-}
-    else if (b <18 ){
-        console.log('Пей колу')
+function fooBoo(bool, foo, boo) {
+    bool ? foo() : boo()
 }
 
-//Задание 7
-let c = prompt('в какую сторону света вы бы хотели отправиться.')
-    switch(c){
-        case 'юг':
-            console.log('на юг пойдешь счастье найдешь')
-        break;
-        case 'север':
-            console.log('на север пойдешь много денег найдешь')
-        break;
-        case 'запад':
-            console.log('на запад пойдешь верного друга найдешь')
-        break;
-        case 'восток':
-            console.log('на восток пойдешь разработчиком станешь')
-        break;
-        default:
-            prompt('Введите ещё раз')
-    }
+function foo() {
+    console.log('foo');
+}
+
+function boo() {
+    console.log('boo');
+}
