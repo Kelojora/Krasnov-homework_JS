@@ -1,64 +1,69 @@
 //Задание 1
-function getSum() {
-    let num = Number(prompt('Введите число'));
-    let sum =0
-    for (let i = 0; i <= num; i++) {
-        sum += i;
-    }
-    return sum
+let userInfo = {
+    name: 'Maksim',
+    age: 28,
 }
-console.log(getSum());
+console.log(userInfo);
+delete userInfo.name
+delete userInfo.age
+console.log(userInfo);
 
 //Задание 2
-function credit(sumCredit){
-    let percent = 0.17
-    let years = 5
-    let total = sumCredit * (1 + percent * years)
-    return pay = total - sumCredit
+let series = {
+    title: 'True detective',
+    productionYear: 2014,
 }
-console.log(credit(100));
+let key = 'productionYear'
+if (key in series) {
+    console.log(true)
+    } else {
+    console.log(false)
+}
 
 //Задание 3
-function trimString(word, from, to) {
-    word = prompt('Введите слово');
-    from = prompt('Введите значение ОТ:');
-    to = prompt('Введите значение ПО:');
-    let result = word.slice(from, to);
-    return result;
+const student = {
+    name: 'John',
+    age: 19,
+    isHappy: true
 }
-console.log(trimString());
+for (let key in student) {
+    console.log(key)
+    console.log(student[key])
+}
 
 //Задание 4
-let num = Number(prompt('Введите число для вычисления суммы'));
-function getSumNumbers(number) {
-    let str = number.toString();
-    let sum = 0
-    for (let i = 0; i < str.length; i++) {
-        sum += Number(str[i]);
-    }
-    return sum
+const colors = {
+    'ru pum pu ru rum': {
+    red: 'красный',
+    green: 'зеленый',
+    blue: 'синий'
+    },
 }
-console.log(getSumNumbers(num));
+console.log(colors['ru pum pu ru rum'].red)
+console.log(colors['ru pum pu ru rum'].blue)
 
 //Задание 5
-function getSum2(a, b) {
-    sum = 0;
-    for (let i = a; i < b; i++) {
-        sum += i;
-    }
-    return sum;
+let salaries = {
+    andrey: 500,
+    sveta: 413,
+    anton: 987,
+    igor: 664,
+    alexandra: 199
 }
-console.log(getSum2(-1,2));
+let averageSalary = (salaries.andrey + salaries.sveta + salaries.anton + salaries.igor + salaries.alexandra) / 5;
+console.log(averageSalary)
 
 //Задание 6
-function fooBoo(bool, foo, boo) {
-    bool ? foo() : boo()
+let user = {
+    login: prompt('Введите ваш логин'),
+    password: prompt('Введите ваш пароль'),
 }
 
-function foo() {
-    console.log('foo');
-}
+let loginCheck = prompt("Подтвердите логин:");
+let passwordCheck = prompt("Подтвердите пароль:");
 
-function boo() {
-    console.log('boo');
+if (loginCheck === user.login && passwordCheck === user.password) {
+  alert("Добро пожаловать!");
+} else {
+  alert("Неверный логин или пароль");
 }
