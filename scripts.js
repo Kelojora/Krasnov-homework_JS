@@ -1,69 +1,40 @@
 //Задание 1
-let userInfo = {
-    name: 'Maksim',
-    age: 28,
-}
-console.log(userInfo);
-delete userInfo.name
-delete userInfo.age
-console.log(userInfo);
+const colors = ['red', 'green', 'blue']
+console.log(colors.length)
 
 //Задание 2
-let series = {
-    title: 'True detective',
-    productionYear: 2014,
-}
-let key = 'productionYear'
-if (key in series) {
-    console.log(true)
-    } else {
-    console.log(false)
-}
+const animals = ['monkey', 'dog', 'cat']
+console.log(animals[animals.length - 1])
 
 //Задание 3
-const student = {
-    name: 'John',
-    age: 19,
-    isHappy: true
+const numbers = [5, 43, 63, 23, 90]
+numbers.length = 0
+console.log(numbers)
+console.log(numbers.splice(0, numbers.length))
+
+//задание 4
+const students = ['Polina', 'Dasha', 'Masha']
+students.pop()
+students.push('Borya')
+students.shift()
+students.unshift('Andrey')
+console.log(students)
+
+//задание 5
+const cats = ['Gachito', 'Tom', 'Batman'];
+for (let i = 0; i < cats.length; i++) {
+    console.log(cats[i]);
 }
-for (let key in student) {
-    console.log(key)
-    console.log(student[key])
+for ( let cat of cats) {
+    console.log(cat);
 }
 
-//Задание 4
-const colors = {
-    'ru pum pu ru rum': {
-    red: 'красный',
-    green: 'зеленый',
-    blue: 'синий'
-    },
-}
-console.log(colors['ru pum pu ru rum'].red)
-console.log(colors['ru pum pu ru rum'].blue)
+//задание 6
+const evenNumbers = [2, 4, 6, 8, 10]
+const oddNumbers = [1, 3, 5, 7, 9]
+const numbersIn = evenNumbers.concat(oddNumbers)
+console.log(numbersIn, 'Индекс 8:' + ' ' + numbersIn.indexOf(8))
 
-//Задание 5
-let salaries = {
-    andrey: 500,
-    sveta: 413,
-    anton: 987,
-    igor: 664,
-    alexandra: 199
-}
-let averageSalary = (salaries.andrey + salaries.sveta + salaries.anton + salaries.igor + salaries.alexandra) / 5;
-console.log(averageSalary)
-
-//Задание 6
-let user = {
-    login: prompt('Введите ваш логин'),
-    password: prompt('Введите ваш пароль'),
-}
-
-let loginCheck = prompt("Подтвердите логин:");
-let passwordCheck = prompt("Подтвердите пароль:");
-
-if (loginCheck === user.login && passwordCheck === user.password) {
-  alert("Добро пожаловать!");
-} else {
-  alert("Неверный логин или пароль");
-}
+//задание 7
+const binary = [0, 0, 0, 0]
+console.log(binary.join('1'))
